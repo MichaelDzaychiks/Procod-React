@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buttons</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        button {
+            font-size: 24px;
+            padding: 10px 20px;
+            margin:10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <button id="redBtn">R</button>
+    <button id="greenBtn">G</button>
+    <button id="blueBtn">B</button>
+
+    <script>
+        const buttons = document.querySelectorAll('button');
+
+        for (const button of buttons) {
+            button.addEventListener('click', () => {
+                if (button.id === 'redBtn') {
+                    document.body.style.backgroundColor = "red";
+                } else if (button.id === 'greenBtn') {
+                    document.body.style.backgroundColor = "green";
+                } else if (button.id === 'blueBtn') {
+                    document.body.style.backgroundColor = "blue";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

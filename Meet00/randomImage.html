@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>random image</title>
+</head>
+
+<body>
+    <div id="imageContainer"></div>
+    <button onclick="refreshImage()">Refresh</button>
+
+    <script>
+        const imageContainer = document.getElementById('imageContainer');
+        const images = ['images/abner_gtg.jpg', 'images/collei.jpg', 'images/hikikomariterakomari.jpg', 'images/moses_aw.jpg', 'images/ricardo.jpg'];
+        
+        function refreshImage() {
+            const randomImage = images[Math.floor(Math.random() * images.length)];
+            imageContainer.innerHTML = `<img src="${randomImage}" alt="Random Image">`;
+        }
+
+        refreshImage();
+    </script>
+</body>
+
+</html>

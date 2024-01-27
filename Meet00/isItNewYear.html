@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>is it new year</title>
+</head>
+<body>
+    <div id="welcomeMessage"></div>
+    <button onclick="refreshMessage()">Refresh</button>
+
+    <script>
+        const welcomeMessage = document.getElementById('welcomeMessage')
+        const currentDate = new Date()
+        const month = currentDate.getMonth()
+        const day = currentDate.getDate()
+        let message;
+        if (month === 11 && day === 31 || month === 0 && day === 1) {
+            message = "Happy New Year!"
+        } else{
+            message = "Welcome!"
+        }
+        welcomeMessage.innerHTML = message
+    </script>
+</body>
+</html>
